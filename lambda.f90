@@ -71,6 +71,7 @@ do nx=1,N
       call calc(kx,ky,Es(nx,ny,:),Ome_ks(nx,ny,:)) 
    enddo
 enddo
+write(*,*) Es(1,1,:)
 !kx=-0.5*pi
 !open(1,file="Evskx",status="replace")
 !do nx=1,N
@@ -94,7 +95,7 @@ allocate(obd(1,1))
       call calc_2(T,Efs,obd(1,1)) 
 !   enddo
 !enddo
-write(*,*) obd(1,1)
+!write(*,*) obd(1,1)
 end program
 
 subroutine BerryCur_k(evac,eval,Ome_kx)
